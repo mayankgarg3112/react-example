@@ -4,15 +4,15 @@ services:
   - docker
 
 script:  
-  - docker build -t mayank/react-main-demo .
-  - docker images mayank/react-main-demo
+  - docker build -t mayankgarg3101/react-main-demo .
+  - docker images mayankgarg3101/react-main-demo
 
 before_deploy:
   - docker login -u mayankgarg3101/ -p poiuy@9876
 
 deploy:
   provider: script
-  script: docker push mayank/react-main-demo
+  script: docker push mayankgarg3101/react-main-demo
   on:
     branch: master
   
